@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserimento Immagini</title>
+</head>
+<body>
+    <h1>Come inserire immagini in una pagina WEB</h1>
+
+    <p>Esistono 2 tipologie di riferimenti per inserire un'immagine:<p>
+    <ul>
+        <li>Path assoluto - Link è diretto ad un'immagine in host su un sito web</li>
+        <li>Path relativo - Link ad un'immagine sulla mia macchina, all'interno del progetto</li>
+    </ul>
+
+    <!-- src e alt si chiamano attributi. Tutti i tag html possono avere attributi ma non è obbligatorio. Nel caso delle immagini src è obbligatorio mentre alt è fortemente consigliato -->
+ 
+    <!-- Questo sotto è un PATH ASSOLUTO perché proviene direttamente da internet -->
+    <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-584580375-1620313618.jpg?crop=0.670xw:1.00xh;0.209xw,0&resize=640:" alt="">
+
+    <!-- Questo sotto è un PATH RELATIVO perché proviene direttamente dalla cartella del progetto -->
+    <img src="./img/tunnel_metropolitana_torino.jpg" alt="Veduta del tunnel della metro di torino">
+
+    <h2>Come inserire un link a una pagina esterna (path assoluto)</h2>
+    <p>Buona norma: quando inseriamo un link ad una pagina esterna conviene sempre inserire l'attributo target="_blank". La pagina si aprirà in una nuova scheda</p>
+
+    <h5>
+        <!-- Questo tag <a> definisce i link -->
+        <a href="https://immaginazioneelavoro.it/" target="_blank">Immaginazione e Lavoro</a>
+    </h5>
+
+    <p>Con il link sottostante vado in una pagina interna al mio sito. In questo caso non è utile usare il target perché la pagina si aprirà nella stessa scheda</p>
+
+    <h5>
+        <a href="./pages/paginaCorso.html">Pagina del Corso</a>
+    </h5>
+
+
+</body>
+</html>
