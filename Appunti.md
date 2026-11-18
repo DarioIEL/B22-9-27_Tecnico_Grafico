@@ -45,6 +45,17 @@ Questo elemento definisce un paragrafo.
 
 Testo che descrive qualcosa. Anche i tag p sono elementi di tipo block
 
+### `<ul>`
+Liste non ordinate (unordered list). Con all'interno il tag `<li>` crea delle liste puntate di elementi (list items)
+```html
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+```
+
+
 ### `<hr>` `<pre>` `<br>`
 - hr: tira una linea orizzonatale
 - pre: imposta un testo preformattato
@@ -89,3 +100,62 @@ Testo che descrive qualcosa. Anche i tag p sono elementi di tipo block
 ### Percorsi relativi e assoluti
 **I percorsi assoluti** puntano a file (immagini e altro) esistenti sul web e hostati su server esterni attraverso il loro link.
 **I percorsi relativi** puntano a file esistenti nella cartella del progetto
+
+## Collegamento al foglio di stile CSS
+Il CSS (Cascade Style Sheet). Foglio di stile a cascata. Mi permette di fornire regole di stile e formattazione agli elementi della pagina.
+
+Come e dove collego un foglio di stile:
+```html
+<head>
+    .
+    .
+    .
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+```
+Và sempre collegato al fondo della head.
+
+**TIPS**: una volta costruito il tag link al fondo della head posso fare `Ctrl + click` sul path dello href per permettere a VSC di creare per me sia la cartella css sia il file style.css 
+
+### Selettori 
+- Tag Name (**nomeTag**) 
+- Class (**.nomeClasse**)
+- Id (**#idElemento**)
+
+**ATT**: Quando fornmisco una regola css ad un selettore tag allora tutti gli elementi con quel tag nella pagina avranno le stesse regole. Stessa cosa vale per le classi
+
+**ATT**: l'attributo id è univoco all'interno del file: uno e un solo elemento può avere quell'attributo collegato
+
+In Html:
+```html
+<h1 id = "titoloPrincipale">...</h1>
+```
+In CSS
+```css
+#titoloPrincipale{
+    font-size: 25px
+}
+```
+
+**ATT**: l'attributo class può essere ripetuto su quanti elementi vogliamo e ogni singolo elemento può avere n classi
+
+In Html:
+```html
+<h2 class = "txtRed txtBig">...</h2>
+<h3 class = "txtRed txtBig">...</h2>
+```
+In CSS:
+```css
+.txtRed{
+    color: red;
+}
+```
+Ovviamente un tag che ha un id può tranquillamente avere una classe o più classi.
+
+### Style in linea con il codice (NON CONSIGLIATO)
+
+
+
+## TIP e TRICKS per VSCode
+- Commenti automatici `Ctrl + ù`
+- Inseguire un link `Ctrl + click` sul path per aprire quel file. Se non lo trova lo crea
